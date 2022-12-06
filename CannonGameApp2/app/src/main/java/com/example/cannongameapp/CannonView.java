@@ -1,4 +1,4 @@
-package com.cannongameapp;
+package com.example.cannongameapp;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -286,9 +286,10 @@ public class CannonView extends SurfaceView
 
     // display an AlertDialog when the game ends
     private void showGameOverDialog(final int messageId) {
+        // DialogFragment to display game stats and start new game
         final AlertDialog.Builder gameResult = new AlertDialog.Builder(this.getContext());
-        gameResult.setMessage(getResources().getString(messageId)+"\n"+getResources().getString(R.string.results_format, shotsFired, totalElapsedTime))
-                .setPositiveButton(R.string.reset_game, new DialogInterface.OnClickListener() {
+        gameResult.setMessage("Finalizar partido")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -296,13 +297,12 @@ public class CannonView extends SurfaceView
                         newGame();
                     }
                 })
-                /*
-                .setNegativeButton("Cerrar", new DialogInterface.OnClickListener() {
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
-                })*/;
+                });
         // in GUI thread, use FragmentManager to display the DialogFragment
         activity.runOnUiThread(
                 new Runnable() {
@@ -314,49 +314,6 @@ public class CannonView extends SurfaceView
                     }
                 }
         );
-        // DialogFragment to display game stats and start new game
-        /*
-        final DialogFragment gameResult =
-                new DialogFragment() {
-                    // create an AlertDialog and return it
-                    @Override
-                    public Dialog onCreateDialog(Bundle bundle) {
-                        // create dialog displaying String resource for messageId
-                        AlertDialog.Builder builder =
-                                new AlertDialog.Builder(getActivity());
-                        builder.setTitle(getResources().getString(messageId));
-
-                        // display number of shots fired and total time elapsed
-                        builder.setMessage(getResources().getString(R.string.results_format, shotsFired, totalElapsedTime));
-                        builder.setPositiveButton(R.string.reset_game,
-                                new DialogInterface.OnClickListener() {
-                                    // called when "Reset Game" Button is pressed
-                                    @RequiresApi(api = Build.VERSION_CODES.M)
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-                                        dialogIsDisplayed = false;
-                                        newGame(); // set up and start a new game
-                                    }
-                                }
-                        );
-
-                        return builder.create(); // return the AlertDialog
-                    }
-                };
-
-        // in GUI thread, use FragmentManager to display the DialogFragment
-        activity.runOnUiThread(
-                new Runnable() {
-                    public void run() {
-                        showSystemBars();
-                        dialogIsDisplayed = true;
-                        gameResult.setCancelable(false); // modal dialog
-                        gameResult.show(activity.getFragmentManager(), "results");
-                    }
-                }
-        );
-        */
     }
 
     // draws the game to the given Canvas
