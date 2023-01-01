@@ -1,0 +1,33 @@
+<resources>
+   <string name="app_name">Directorio</string>
+   <string name="menuitem_edit">Editar</string>
+   <string name="menuitem_delete">Borrar</string>
+   <string name="hint_name_required">Nombre)</string>
+   <string name="hint_email">Correo</string>
+   <string name="hint_phone">Celular</string>
+   <string name="hint_street">Calle</string>
+   <string name="hint_city">Ciudad</string>
+   <string name="hint_state">Provincia</string>
+   <string name="hint_zip">Codigo Postal</string>
+   <string name="label_name">Nombre:</string>
+   <string name="label_email">Correo:</string>
+   <string name="label_phone">Celular:</string>
+   <string name="label_street">Calle:</string>
+   <string name="label_city">Ciudad:</string>
+   <string name="label_state">Estado:</string>
+   <string name="label_zip">Codigo Postal:</string>
+   <string name="confirm_title">Estas seguro?</string>
+   <string name="confirm_message">Esto eliminará permanentemente el contacto.</string>
+   <string name="button_cancel">Cancelar</string>
+   <string name="button_delete">Borrar</string>
+   <string name="contact_added">Contacto añadido con éxito</string>
+   <string name="contact_not_added">No se agregó el contacto debido a un error</string>
+   <string name="contact_updated">Contacto actualizado</string>
+   <string name="contact_not_updated">El contacto no se actualizó debido a un error</string>
+   <string name="invalid_query_uri">Uri de consulta no válido: </string>
+   <string name="invalid_insert_uri">Uri de consulta no válido: </string>
+   <string name="invalid_update_uri">Uri de consulta no válido: </string>
+   <string name="invalid_delete_uri">Uri de consulta no válido: </string>
+   <string name="insert_failed">
+Error al insertar:</string>
+</resources>

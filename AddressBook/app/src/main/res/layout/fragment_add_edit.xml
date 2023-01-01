@@ -1,0 +1,150 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/nameTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:hint="Nombre"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <EditText
+          android:id="@+id/editText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_name_required"
+          android:imeOptions="actionNext"
+          android:inputType="textCapWords|textPersonName"
+          tools:ignore="TouchTargetSizeCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/phoneTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout">
+
+      <EditText
+          android:id="@+id/editText2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_phone"
+          android:imeOptions="actionNext"
+          android:inputType="phone"
+          tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/emailTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/phoneTextInputLayout">
+
+      <EditText
+          android:id="@+id/editText3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_email"
+          android:imeOptions="actionNext"
+          android:inputType="textEmailAddress"
+          tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/streetTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout">
+
+      <EditText
+          android:id="@+id/editText4"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_street"
+          android:imeOptions="actionNext"
+          android:inputType="textCapWords|textPostalAddress"
+          tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/cityTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/streetTextInputLayout">
+
+      <EditText
+          android:id="@+id/editText5"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_city"
+          android:imeOptions="actionNext"
+          android:inputType="textCapWords|textPostalAddress"
+          tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/stateTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/cityTextInputLayout">
+
+      <EditText
+          android:id="@+id/editText6"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_state"
+          android:imeOptions="actionNext"
+          android:inputType="textPostalAddress|textCapCharacters"
+          tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+   <android.support.design.widget.TextInputLayout
+       android:id="@+id/zipTextInputLayout"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:hint="Zip"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/stateTextInputLayout">
+
+      <EditText
+          android:id="@+id/editText7"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_zip"
+          android:imeOptions="actionDone"
+          android:inputType="number"
+          tools:ignore="TouchTargetSizeCheck" />
+   </android.support.design.widget.TextInputLayout>
+
+
+   <android.support.design.widget.FloatingActionButton
+       android:id="@+id/saveFloatingActionButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="1dp"
+       android:layout_marginEnd="44dp"
+       android:src="@drawable/ic_save_24dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:ignore="SpeakableTextPresentCheck" />
+
+</android.support.constraint.ConstraintLayout>
